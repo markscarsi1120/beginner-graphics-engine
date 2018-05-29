@@ -33,8 +33,8 @@ void Line::updateLine()
          double hold = (index-a.getPoint()[0])/(double)(help.getVec()[0]);
          double y = (help.getVec()[1]*hold)+a.getPoint()[1];
          double z = (help.getVec()[2]*hold)+a.getPoint()[2];
-         Point ass(index,y,z);
-         line.push_back(ass);
+         Point aa(index,y,z);
+         line.push_back(aa);
          }
       line.push_back(b);
       }
@@ -49,8 +49,8 @@ void Line::updateLine()
          double hold = (index-a.getPoint()[1])/(double)(help1.getVec()[1]);
          double x = (help1.getVec()[0]*hold)+a.getPoint()[0];
          double z = (help1.getVec()[2]*hold)+a.getPoint()[2];
-         Point ass(x,index,z);
-         line.push_back(ass);
+         Point aa(x,index,z);
+         line.push_back(aa);
          }
       line.push_back(b);
       }
@@ -65,8 +65,8 @@ void Line::updateLine()
          double hold = (index-a.getPoint()[2])/(double)(help2.getVec()[2]);
          double y = (help2.getVec()[1]*hold)+a.getPoint()[1];
          double x = (help2.getVec()[0]*hold)+a.getPoint()[0];
-         Point ass(x,y,index);
-         line.push_back(ass);
+         Point aa(x,y,index);
+         line.push_back(aa);
          }
       line.push_back(b);
       }
