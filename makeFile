@@ -1,0 +1,22 @@
+# Makefile for Writing Make Files Example
+
+# *****************************************************
+# Variables to control Makefile operation
+
+CXX = g++
+CXXFLAGS = -Wall -g
+
+# ****************************************************
+# Targets needed to bring the executable up to date
+
+engineDriver: engineDriver.o Point.o Rectangle.o
+	$(CXX) $(CXXFLAGS) -o engineDriver engineDriver.o Point.o vector.o
+
+# The main.o target can be written more simply
+
+engineDriver.o: engineDriver.cpp Point.h Vector.h
+	$(CXX) $(CXXFLAGS) -c engineDriver.cpp
+
+Point.o: Vector.h Point.h
+
+Vector.o: Vector.h
